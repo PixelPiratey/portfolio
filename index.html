@@ -5,309 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gaurav's Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="night-mode.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
- 
- 
- * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    font-family: 'Poppins',sans-serif;
    
-    outline:none;
-    border:none;
- }
- :root {
- --bg-color: #081b29;
- --second-bg-color: #112e42;
- --text-color: #ededed;
- --main-color: #00abf0;
- }
-html {
-   font-size: 62.5%;
-   overflow-x:hidden;
-}
- body {
-  background: #081b29;
-  box-sizing: border-box;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color:#ededed;
-  padding: 2rem 9%;
- }
- .header{
-    position:fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 10%;
-    background: transparent;
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index:100;
    
-        }
-        .logo {
-          font-size: 2.5rem;
-          color:#ededed;
-          text-decoration: none;
-          font-weight: 600;
-           
-        }
-        .navbar a {
-         font-size: 18px;
-         color: #ededed;
-         text-decoration: none;
-         font-weight: 500;
-         margin-left: 3.5rem;
-         transition: .3s;
-        }
-
-        .navbar a:hover,
-        .navbar a.active {
-         color:rgb(57, 187, 238)
-        }
-        #menu-icon {
-         font-size: 3.6rem;
-         color:var(--text-color);
-         cursor:pointer;
-         display:none;
-        }
-        section {
-         min-height: 100vh;
-         padding:10rem 9% 2rem
-        }
-        .home { 
-            display:flex;
-          
-            align-items:center;
-            height:100vh;
-            padding:0px 10%;
-        }
-        .home-content {
-         background: transparent;
-         max-width: 60rem;
-        }
-        .home-content h1{
-         font-size: 5.6rem;
-         font-weight: 700;
-         line-height: 1.3;
-        }
-        .home-content .text-animate {
-         position:relative;
-         width: 32.8rem;
-        }
-        .home-content .text-animate h3 {
-         font-size: 3.2rem;
-         font-weight: 700;
-         color:#00abf0;
-         -webkit-text-stroke: .7px var(--main-color);
-        }
-        .home-content p{
-         font-size: 1.6rem;
-         margin: 2rem 0 4rem;
-         line-height: 1.2;
-        }
-         .btn-box {
-         display:flex;
-         justify-content: space-between;
-         width: 34.5rem ;
-         height:5rem;
-         
-        }
-        .btn-box .btn {
-         position:relative;
-         display:inline-flex;
-         justify-content: center;
-         align-items: center;
-         width:150px;
-         height:100%;
-         background: #00abf0;
-         border: 2px solid #00abf0;
-         border-radius: 8px;
-         font-size: 19px;
-         color: #081b29;
-         text-decoration: none;
-         font-weight: 600;
-         letter-spacing: 1px;
-         z-index:1;
-         overflow: hidden;
-         transition: .5s;
-        }
-        .btn-box .btn:hover {
-         color:#00abf0;
-
-        }
-        .btn-box .btn:nth-child(2) {
-          background:transparent;
-          color:#00abf0;
-
-        }
-
-        .btn-box .btn:nth-child(2):hover {
-         color:#081b29;
-
-        }
-        .btn-box .btn:nth-child(2)::before {
-         background:#00abf0;
-        }
-        .btn-box .btn::before {
-         content:'';
-         position:absolute;
-         top: 0;
-         left: 0;
-         width: 0;
-         height: 100%;
-         background: #081b29;
-         z-index: -1;
-         transition:.5s;
-
-
-        }
-        .btn-box .btn:hover::before {
-         width:100%;
-
-        }
-     
-        .home-sci {
-         position:absolute;
-         bottom:40px;
-         width:170px;
-         
-         display:flex;
-         justify-content: space-between;
-
-        }
-
-        .home-sci a {
-         position:relative;
-         display:inline-flex;
-         justify-content: center;
-         align-items:center;
-         width:40px;   
-         height: 40px;
-         background: transparent;
-         border: 2px solid #00abf0;
-         border-radius:50%;
-         font-size:20px;
-         color:#00abf0;
-         text-decoration: none;
-         z-index:1;
-         overflow:hidden;
-         transition: .5s;
-        }
-        .home-sci a:hover {
-           color:#081b29;
-        }
-        
-         .home-sci a::before {
-            content:'';
-            position:absolute;
-            top: 0;
-            left: 0;
-            width:0;
-            height: 100%;
-            background: #00abf0;
-            z-index: -1;
-            transition: .5s;
-         }
-         .home-sci a:hover::before {
-              width: 100%;
-         }
-         .about{
-            display: flex;
-            justify-content:center;
-            align-items: center;
-            flex-direction:column;
-            gap: 2rem;
-            background: var(--second-bg-color);
-            padding-bottom: 6rem;
-         }
-         .heading{
-            font-size: 5rem;
-            margin-bottom: 3rem;
-            text-align: center;
-         }
-         span {
-             color:#00abf0;
-         }
-         .about-img{
-            position:relative;
-            width: 25rem;
-            height:25rem;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-
-         }
-         .about-img img{
-            margin-bottom:0%;
-            width: 90%;
-            width:90%;
-            border-radius: 50%;
-            border: .2rem solid var(--main-color);
-
-
-         }
-         .about-img .circle-spin {
-            position:absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%) rotate(0);
-            width:100%;
-            height:100%;
-            border-radius: 50%;
-            border-top: .2rem solid var(--second-bg-color);
-            border-bottom: .2rem solid var(--second-bg-color);
-            border-left: .2rem solid #00abf0;
-            border-right: .2rem solid #00abf0;
-            
-              }
-
-         .about-content {
-            text-align: center;
-         }
-         .about-content h3 {
-            font-size: 2.6rem;
-         }
-         .about-content p {
-            font-size: 1.6rem;
-            margin: 2rem 0 3rem;
-         }
-         .btn-box.btns {
-            display:inline-block;
-            width: 15rem;
-         }
-         .btn-box.btns a::before {
-            background: var(--second-bg-color) ;
-         }
-
-       .education {
-         display: flex;
-         justify-content: center;
-         align-items:center;
-         flex-direction: column;
-         min-height: auto;
-         padding-bottom:5rem;
-       }
-
-
-         
-    </style>
 </head>
 <body>
+   
      <header class="header">
         <a href="#" class="logo">Gaurav</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
         <nav class="navbar">
          <a href="#home" class="active">Home</a>
          <a href="#about">About</a>
-         <a href="#projects">Projects</a>
+         <a href="#education">Projects</a>
          <a href="#skills">Skills</a>
          <a href="#contact">Contact</a>
+         <span class="active-nav"></span>
         </nav>
+        <label class="mode">
+         <input type="checkbox" id="darkbtn" class="hidden">
+         <i class='bx bxs-moon' id="moonIcon"></i>
+     </label>
      </header>
 
      <section class="home" id="home">
@@ -316,16 +35,17 @@ html {
             <div class="text-animate">
             <h3>Full Stack Developer</h3>
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias earum magni ratione maiores quia aut laboriosam totam eligendi placeat aliquid.</p>
+            <p>I am a skilled web developer experienced in HTML, CSS, JavaScript, Node.js, React.js, and Express, passionate about innovation.</p>
            <div class="btn-box">
             <a href="#" class="btn">Hire Me</a>
             <a href="#" class="btn">Let's Talk</a>
            </div> 
         </div> 
        <div class="home-sci">
-          <a href="#"><i class='bx bxl-meta'></i></a>
-          <a href="#"><i class='bx bxl-twitter'></i></a>
-          <a href="#"><i class='bx bxl-linkedin'></i></a>
+         <a href="https://github.com/PixelPiratey"><i class='bx bxl-github'></i></a>
+          <a href="https://www.linkedin.com/in/gaurav-kumar-singh-31296a256/"><i class='bx bxl-twitter'></i></a>
+          <a href="https://x.com/Gaurav10713?t=awnl04qACPkW6NXLw_pnkw&s=09"><i class='bx bxl-linkedin'></i></a>
+          
        </div>
 
      </section>
@@ -333,12 +53,13 @@ html {
      <section class="about" id="about">
       <h2 class="heading">About <span>Me</span></h2>
       <div class="about-img">
-         <img src="home.jpg" alt="">
+         <img src="Home.png" alt="">
          <span class="circle-spin"></span>
       </div>
       <div class="about-content">
          <h3>Full Stack Developer</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint illo odit, earum nam nemo cum facilis deserunt culpa perferendis eveniet?</p>
+      <p>Brief Information:
+         As a budding web developer, I've honed my skills in HTML, CSS, and JavaScript to craft interactive and user-friendly web experiences. My expertise extends to backend development with Node.js, and I've built dynamic front-end applications using React.js. I'm also well-versed in Express.js for server-side scripting. Additionally, I've delved into Data Structures and Algorithms (DSA) in Java, though I'm yet to explore advanced DSA concepts. My passion lies in creating innovative web solutions and learning continuously in this dynamic field.</p>
    <div class="btn-box btns">
       <a href="#" class="btn">Read More</a>
    </div>
@@ -348,37 +69,292 @@ html {
 
      <section class="education" id="education">
 <h2 class="heading">My <span>Journey</span></h2>
- <div class="-row">
-   <div class="Journey-column">
+ <div class="education-row">
+   <div class="education-column">
     <h3 class="title">Education</h3>
      <div class="education-box">
       <div class="education-content">
       <div class="content">
-         <div class="year"><i class='bx bxs-calendar' ></i>2017-2018</div>
-         <h3>Master Degree- University</h3>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla odio sit quasi impedit ex corporis, dolor tempora delectus voluptates, exercitationem sapiente corrupti similique! A iste repellat, illum minima delectus nihil pariatur placeat! Rem officia ratione labore modi est iste vero, reiciendis voluptates dolore, pariatur, commodi impedit. Nulla, quae? At, molestiae.</p>
+         <div class="year"><i class='bx bxs-calendar' ></i>2009-2019</div>
+         <h3>St. Karen's Secondary School</h3>
+         <p>I am a dedicated and academically-driven individual who completed my secondary education at St. Karen Secondary School, where I pursued my studies from the 1st to the 10th grade. My academic journey culminated in an impressive achievement as I secured 90% in my Class 10 examinations, reflecting my commitment to excellence</p>
       </div>
      </div>
+       
+     <div class="education-content">
+      <div class="content">
+         <div class="year"><i class='bx bxs-calendar' ></i>2019-2021</div>
+         <h3>Vidya Niketan</h3>
+         <p>I done My Higher education (11th-12th) From Vidya Niketan.I got 85% marks in 12th board.</p>
+      </div>
+     </div>
+
+     <div class="education-content">
+      <div class="content">
+         <div class="year"><i class='bx bxs-calendar' ></i>2022-2026</div>
+         <h3>BIT-MESRA</h3>
+         <p>Doing My Graduation from Bit-Mesra in Mechanical Engineering.But,my core interest is in Coding and Exploring the World of Web</p>
+      </div>
+     </div>
+
+ </div>
+ </div>
+    
+ <div class="education-column">
+   <h3 class="title">Projects</h3>
+    <div class="education-box">
+     <div class="education-content">
+     
+    </div>
+       
+    <div class="education-content">
+     <div class="content">
         
-     <div class="education-content">
-      <div class="content">
-         <div class="year"><i class='bx bxs-calendar' ></i>2018-2019</div>
-         <h3>Master Degree- University</h3>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla odio sit quasi impedit ex corporis, dolor tempora delectus voluptates, exercitationem sapiente corrupti similique! A iste repellat, illum minima delectus nihil pariatur placeat! Rem officia ratione labore modi est iste vero, reiciendis voluptates dolore, pariatur, commodi impedit. Nulla, quae? At, molestiae.</p>
-      </div>
+        <h3>PortFolio Website</h3>
+        <p></p>
      </div>
+    </div>
 
-     <div class="education-content">
-      <div class="content">
-         <div class="year"><i class='bx bxs-calendar' ></i>2019-2020</div>
-         <h3>Master Degree- University</h3>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla odio sit quasi impedit ex corporis, dolor tempora delectus voluptates, exercitationem sapiente corrupti similique! A iste repellat, illum minima delectus nihil pariatur placeat! Rem officia ratione labore modi est iste vero, reiciendis voluptates dolore, pariatur, commodi impedit. Nulla, quae? At, molestiae.</p>
-      </div>
+    <div class="education-content">
+     <div class="content">
+        
+        <h3>News Website</h3>
+        <p></p>
      </div>
+    </div>
+<div class="education-content">
+   <div class="content">
+      <div class="codeforces-rating">
+         <h3>Codeforces Rating: - <a href="https://codeforces.com/profile/Gaurav54" target="_blank">https://codeforces.com/profile/Gaurav54</a> </h3>
+         <div class="input-field">
+             <h1>Codeforces Handle: - <input type="text" class="handleInput" placeholder="     Your Codeforces Id" required><h3> <span id="codeforces-rating"></span> </h3>
+                 <span class="focus"></span>
+                 <div class="btns" style="display: flex; justify-content: center;">
+                     <button type="button" class="btn1" onclick="compareHandles()">Submit</button>
+                 </div>
+             </h1>
+         </div>
+     </div>
+     
+  </div>
+</div>
+</div>
+</div>
+<!--Codeforces-->
 
- </div>
- </div>
  </div>
      </section>
+
+
+     <section class="skills" id="skills">
+         <h2 class="heading">My <span>Skills</span></h2>
+       <div class="skills-row">
+         <div class="skills-column">
+            <h3 class="title">Coding Skills</h3>
+             <div class="skills-box">
+               <div class="skills-content">
+                  <div class="progess">
+                    <h3>HTML <span>90%</span></h3>
+                    <div class="bar"><span></span></div>
+                  </div>
+
+                  <div class="progess">
+                     <h3>CSS <span>75%</span></h3>
+                     <div class="bar"><span></span></div>
+                   </div>
+
+                   <div class="progess">
+                     <h3>JavaScript <span>55%</span></h3>
+                     <div class="bar"><span></span></div>
+                   </div>
+
+                   <div class="progess">
+                     <h3>C <span>90%</span></h3>
+                     <div class="bar"><span></span></div>
+                   </div>
+                   <div class="progess">
+                     <h3>Java <span>65%</span></h3>
+                     <div class="bar"><span></span></div>
+                   </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="skills-column">
+            <h3 class="title">Professional Skills</h3>
+            <div class="skills-box">
+               <div class="skills-content">
+                  <div class="progess">
+                    <h3>CyberSecurity <span>30%</span></h3>
+                    <div class="bar"><span></span></div>
+                  </div>
+
+                  <div class="progess">
+                     <h3>Web Development <span>60%</span></h3>
+                     <div class="bar"><span></span></div>
+                  </div>
+
+                  <div class="progess">
+                     <h3>Graphic Design <span>55%</span></h3>
+                     <div class="bar"><span></span></div>
+                  </div>
+
+                  <div class="progess">
+                     <h3>Backend Development<span>20%</span></h3>
+                     <div class="bar"><span></span></div>
+                  </div>
+                  <div class="progess">
+                     <h3>DSA<span>40%</span></h3>
+                     <div class="bar"><span></span></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+        </div>    
+     </section>
+
+
+     <!--Contact-->
+     <section class="contact" id="contact">
+      <h2 class="heading">Contact <span>Me!</span></h2>
+
+      <form action="#">
+         <div class="input-box">
+            <div class="input-field">
+               <input type="text" placeholder="Full Name" required>
+               <span class="focus"></span>
+            </div>
+            <div class="input-field">
+               <input type="text" placeholder="Email Address" required>
+               <span class="focus"></span>
+            </div>
+         </div>
+         <div class="input-box">
+            <div class="input-field">
+               <input type="number" placeholder="Mobile Number" required>
+               <span class="focus"></span>
+            </div>
+            <div class="input-field">
+               <input type="text" placeholder="Email Subject" required>
+               <span class="focus"></span>
+            </div>
+         </div>
+         <div class="textarea-field">
+            <textarea name="" id="" clos="30" rows="10" placeholder="Your Message" required></textarea> 
+         <span class="focus"></span>   
+         </div>
+         <div class="btn-box btns">
+            <button type="submit" class="btn">Submit</button>
+         </div>
+      </form>
+     </section>
+
+
+     <footer class="footer">
+      <div class="footer-text">
+         <p>Copyright &copy; 2023 by Gaurav | All Rights Reserved.</p>
+      </div>
+      <div class="footer-iconTop">
+         <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
+      </div>
+     </footer>
+     <script>
+
+
+
+
+
+
+
+
+
+      const darkbtn = document.getElementById('darkbtn');
+const body = document.body;
+const moonIcon = document.querySelector('.bx.bxs-moon'); // Assuming this is your moon icon
+const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+
+if (isDarkMode) {
+body.classList.add('dark-mode');
+darkbtn.checked = true;
+moonIcon.style.color = 'black'; // Change this to the color you want when dark mode is enabled
+} else {
+moonIcon.style.color = 'white'; // Change this to the color you want when dark mode is disabled
+}
+
+darkbtn.addEventListener('change', () => {
+if (darkbtn.checked) {
+ body.classList.add('dark-mode');
+ localStorage.setItem('darkMode', 'enabled');
+ moonIcon.style.color = 'black'; // Change this to the color you want when dark mode is enabled
+} else {
+ body.classList.remove('dark-mode');
+ localStorage.setItem('darkMode', 'disabled');
+ moonIcon.style.color = 'white'; // Change this to the color you want when dark mode is disabled
+}
+});
+
+
+async function compareHandles() {
+    const handleInput = document.querySelector('.handleInput').value;
+
+    try {
+        const response = await fetch(`https://codeforces.com/api/user.info?handles=${handleInput}`);
+        const data = await response.json();
+        console.log('API Response:', data);
+
+        // Check if the API response has an error
+        if (data.status === 'FAILED') {
+            alert('User not found or an error occurred.');
+            return;
+        }
+
+        // Assuming the API response is an array of users
+        const user = data.result[0];
+
+        if (user) {
+            console.log('User Rating:', user.rating);
+            const ratingElement = document.getElementById('codeforces-rating');
+            ratingElement.textContent = ` (${user.rating})`;
+        } else {
+            alert('User not found or an error occurred.');
+        }
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+}
+
+   
+
+
+   let menuIcon =document.querySelector('#menu-icon');
+   let navbar = document.querySelector('.navbar');
+   menuIcon.onclick = () => {
+    menuIcon.classList.toggle('bx-x');
+    navbar.classList.toggle('active');  
+}
+
+let sections =document.querySelectorAll('section');
+let navLinks =document.querySelectorAll('header nav a');
+window.onscroll = () => {
+    sections.forEach(sec => {
+        let top =window.scrollY;
+        let offset =sec.offsetTop - 100;
+        let height =sec.offsetHeight;
+        let id =sec.getAttribute('id');
+        if(top>=offset && top<offset+height){
+            navLinks.forEach(links => {
+                links.classList.remove('active');
+                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+            });
+        }
+    });
+    window.onscroll = () => {
+            let header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 100);
+        }
+}
+</script>
+<script src="js/script.js"></script>
    </body>
+   
 </html>
